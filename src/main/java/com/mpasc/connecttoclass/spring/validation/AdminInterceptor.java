@@ -1,5 +1,7 @@
 package com.mpasc.connecttoclass.spring.validation;
 
+import java.util.logging.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,10 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Component
 public class AdminInterceptor implements  HandlerInterceptor{
-	
+	private static Logger logger = Logger.getLogger(AdminInterceptor.class.toString());
 	
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)throws Exception {
-
+		logger.info("Working on this.............");
 		return true; 
 	}
 	
